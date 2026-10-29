@@ -3,7 +3,9 @@
 MVP académico para la asignatura **Análisis y Diseño de Software** (Proyecto Integrador, Ing. Mg. José Javier Zapata Polo).
 Caso: **IPS Ambulatoria Bienestar**, institución **ficticia**. Todos los datos son de prueba; no se almacena información clínica.
 
-- **Aplicación publicada:** `https://<usuario>.github.io/<repositorio>/` *(completar)*
+- **Aplicación publicada:** https://juanospino.github.io/citasalud/
+- **Repositorio:** https://github.com/JuanOspino/citasalud
+- **Documento de análisis y diseño:** https://claude.ai/artifact/VVxc1xd5ydV3fb7vHpyVDB (copia en `docs/`)
 - **Integrantes:** *(completar: nombre · usuario GitHub)*
 
 ## Tecnologías
@@ -16,19 +18,21 @@ HTML5, CSS3 y JavaScript (módulos ES, sin frameworks) · GitHub Pages (frontend
 |---|---|
 | Paciente | Registrarse, iniciar sesión, recuperar contraseña, editar su perfil, buscar disponibilidad por especialidad/profesional/fecha, reservar, ver "Mis citas" e historial, cancelar con ≥ 2 h de anticipación |
 | Profesional | Ver solo su agenda por rango y estado, ver detalle e historial, confirmar, marcar atendida / no asistió (cuando la cita ya inició) o cancelar |
-| Administrador | Indicadores (por estado, especialidad y mes, tasa de inasistencia), consultar y gestionar todas las citas, reservar en nombre de un paciente, crear/editar/activar/desactivar especialidades, registrar y editar profesionales, generar franjas en bloque, agregar/activar/desactivar/eliminar franjas |
+| Administrador | Indicadores (por estado, especialidad y mes, tasa de inasistencia), consultar y gestionar todas las citas, reservar en nombre de un paciente, buscar/editar/activar/desactivar/anonimizar pacientes, crear/editar/activar/desactivar especialidades, registrar y editar profesionales, generar franjas en bloque, agregar/editar/activar/desactivar/eliminar franjas |
 
 ## Estructura del repositorio
 
 ```
 index.html · registro.html · recuperar.html       Acceso
 paciente.html · profesional.html · admin.html     Paneles por rol
-assets/css/estilos.css                            Estilos responsive (mobile-first, modo oscuro)
+assets/css/estilos.css                            Estilos responsive (mobile-first, alto contraste)
 assets/js/config.js                               URL y clave pública (anon) de Supabase
 assets/js/supabaseClient.js                       Cliente único de Supabase
 assets/js/api.js                                  Acceso a datos + traducción de errores
 assets/js/auth.js                                 Sesión y redirección por rol
 assets/js/ui.js                                   Creación segura de nodos, avisos, diálogos, formatos
+assets/js/accesibilidad.js                        Alto contraste y tamaño de letra (A−/A+)
+assets/js/carrusel.js                             Carrusel accesible de la portada
 assets/js/validacion.js                           Validaciones del cliente
 assets/js/componentes/                            Reserva y detalle de cita (reutilizados)
 assets/js/pages/                                  Lógica de cada página
@@ -37,7 +41,7 @@ sql/politicas_rls.sql                             RLS, políticas y privilegios
 sql/datos_prueba.sql                              Cuentas demo y datos ficticios
 sql/reset.sql                                     Borra todo para reconstruir (solo pruebas)
 pruebas/                                          Pruebas SQL de reglas/seguridad y pruebas E2E
-docs/                                             Documento de análisis y diseño, capturas
+docs/                                             Documento de análisis y diseño, wireframes, capturas, guías
 ```
 
 ## Instalación paso a paso
@@ -87,6 +91,14 @@ Contraseña para todas: `CitaDemo2026*`
 - Una sola sede; no se gestionan consultorios ni recursos físicos.
 - La reprogramación se hace cancelando y reservando de nuevo.
 - La regla de anticipación (2 h) es fija en `horas_minimas_cancelacion()` y en `config.js`.
+
+## Documentación (`docs/`)
+
+- `documento_analisis_diseno.md`: copia del documento de análisis y diseño (versión editable en el enlace de arriba).
+- `wireframes/`: bocetos de baja fidelidad de las pantallas principales.
+- `capturas/`: capturas de la aplicación en computador y celular.
+- `GUIA_PASO_A_PASO.md`: instalación y despliegue.
+- `GUIA_SUSTENTACION.md`: respuestas preparadas a las preguntas de la sustentación.
 
 ## Uso de IA
 
