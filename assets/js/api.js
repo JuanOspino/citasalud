@@ -199,6 +199,20 @@ export const adminApi = {
     return ejecutar(q);
   },
 
+  listarPacientes: ({ texto = '', estado = 'activos' } = {}) => {
+    const t = limpiarBusqueda(texto);
+    let q = supabase.from('profiles').select('id, nombres, documento, telefono, fecha_nacimiento, activo')
+      .eq('rol', 'paciente').order('nombres').limit(50);
+    if (estado === 'activos') q = q.eq('activo', true);
+    if (estado === 'inactivos') q = q.eq('activo', false);
+    if (t) q = q.or(`nombres.ilike.*${t}*,documento.ilike.*${t}*`);
+    return ejecutar(q);
+  },
+  cambiarEstadoPerfil: (id, activo) => ejecutar(
+    supabase.from('profiles').update({ activo }).eq('id', id).select('id, activo').single(),
+  ),
+  anonimizarPaciente: (id) => ejecutar(supabase.rpc('anonimizar_paciente', { p_profile_id: id })),
+
   franjas: ({ professionalId, desde, hasta }) => ejecutar(
     supabase.from('schedules')
       .select('id, fecha, hora_inicio, hora_fin, activo, citas:appointments(id, estado)')
