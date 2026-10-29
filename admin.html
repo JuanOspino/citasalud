@@ -36,6 +36,7 @@
       <button role="tab" id="tab-citas" aria-controls="panel-citas" data-pestana="citas">Citas</button>
       <button role="tab" id="tab-horarios" aria-controls="panel-horarios" data-pestana="horarios">Horarios</button>
       <button role="tab" id="tab-profesionales" aria-controls="panel-profesionales" data-pestana="profesionales">Profesionales</button>
+      <button role="tab" id="tab-pacientes" aria-controls="panel-pacientes" data-pestana="pacientes">Pacientes</button>
       <button role="tab" id="tab-especialidades" aria-controls="panel-especialidades" data-pestana="especialidades">Especialidades</button>
     </div>
 
@@ -138,6 +139,25 @@
         </form>
       </div>
       <div id="tabla-profesionales"></div>
+    </section>
+
+    <section id="panel-pacientes" role="tabpanel" aria-labelledby="tab-pacientes" hidden>
+      <div class="tarjeta">
+        <h2>Pacientes</h2>
+        <form id="filtro-pacientes" class="formulario formulario--fila" novalidate>
+          <div class="campo"><label for="pa-buscar">Buscar</label><input id="pa-buscar" name="buscar" type="search" placeholder="Nombre o documento"></div>
+          <div class="campo">
+            <label for="pa-estado">Estado</label>
+            <select id="pa-estado" name="estado">
+              <option value="activos">Activos</option>
+              <option value="inactivos">Inactivos</option>
+              <option value="todos">Todos</option>
+            </select>
+          </div>
+          <div class="campo"><button type="submit" class="boton">Buscar</button></div>
+        </form>
+      </div>
+      <div id="tabla-pacientes"></div>
     </section>
 
     <section id="panel-especialidades" role="tabpanel" aria-labelledby="tab-especialidades" hidden>
