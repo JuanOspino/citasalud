@@ -1,5 +1,5 @@
 import { protegerPagina } from '../auth.js';
-import { adminApi, catalogoApi, citasApi } from '../api.js';
+import { adminApi, catalogoApi, citasApi, perfilApi } from '../api.js';
 import { montarReserva } from '../componentes/reserva.js';
 import { abrirDetalleCita } from '../componentes/detalleCita.js';
 import {
@@ -135,6 +135,8 @@ async function cargarSelectProfesionales() {
     profesionalesCache.map((p) => opcion(p.id, `${p.perfil.nombres} · ${p.especialidad.nombre}${p.activo ? '' : ' (inactivo)'}`, p.id === actual)));
 }
 
+const citaActiva = (f) => f.citas.find((c) => ['programada', 'confirmada'].includes(c.estado));
+
 async function cargarFranjas() {
   const zona = $('#tabla-horarios');
   const { profesional, desde, hasta } = datosFormulario(formHor);
@@ -144,7 +146,6 @@ async function cargarFranjas() {
   try {
     const franjas = await adminApi.franjas({ professionalId: profesional, desde, hasta });
     if (!franjas.length) { mostrarEstado(zona, 'vacio', 'No hay franjas en ese rango. Puede generarlas arriba.'); return; }
-    const citaActiva = (f) => f.citas.find((c) => ['programada', 'confirmada'].includes(c.estado));
     const ocupacion = (f) => {
       const activa = citaActiva(f);
       if (activa) return insigniaEstado(activa.estado);
@@ -159,6 +160,7 @@ async function cargarFranjas() {
       {
         titulo: 'Acciones',
         celda: (f) => el('div', { class: 'acciones' },
+          citaActiva(f) ? null : boton('Editar', () => editarFranja(f), 'boton--secundario', `Editar franja del ${f.fecha} a las ${f.hora_inicio.slice(0, 5)}`),
           boton(f.activo ? 'Desactivar' : 'Activar', () => alternarFranja(f)),
           f.citas.length ? null : boton('Eliminar', () => eliminarFranja(f), 'boton--peligro')),
       },
@@ -166,6 +168,34 @@ async function cargarFranjas() {
   } catch (e) {
     mostrarEstado(zona, 'error', e.message);
   }
+}
+
+function editarFranja(f) {
+  const alerta = el('div', { hidden: true });
+  const form = el('form', { class: 'formulario', attrs: { novalidate: true } },
+    el('div', { class: 'campo' }, el('label', { for: 'ef-fecha', text: 'Fecha' }),
+      el('input', { id: 'ef-fecha', name: 'fecha', type: 'date', min: hoy, value: f.fecha, required: true })),
+    el('div', { class: 'rejilla rejilla--2' },
+      el('div', { class: 'campo' }, el('label', { for: 'ef-inicio', text: 'Hora inicio' }),
+        el('input', { id: 'ef-inicio', name: 'inicio', type: 'time', value: f.hora_inicio.slice(0, 5), required: true })),
+      el('div', { class: 'campo' }, el('label', { for: 'ef-fin', text: 'Hora fin' }),
+        el('input', { id: 'ef-fin', name: 'fin', type: 'time', value: f.hora_fin.slice(0, 5), required: true }))),
+    el('p', { class: 'ayuda', text: 'Solo se pueden editar franjas sin cita activa. El sistema rechaza horarios pasados o que se crucen con otra franja.' }));
+  const btnCancelar = el('button', { type: 'button', class: 'boton boton--secundario', text: 'Cancelar' });
+  const btnGuardar = el('button', { type: 'button', class: 'boton', text: 'Guardar cambios' });
+  const dlg = abrirDialogo({ titulo: 'Editar franja', contenido: [alerta, form], acciones: [btnCancelar, btnGuardar] });
+  btnCancelar.addEventListener('click', () => dlg.close());
+  btnGuardar.addEventListener('click', () => conCarga(btnGuardar, async () => {
+    if (!validarFormulario(form, { fecha: [reglas.requerido, reglas.fechaNoPasada], inicio: [reglas.requerido], fin: [reglas.requerido] })) return;
+    const d = datosFormulario(form);
+    if (d.fin <= d.inicio) { mostrarAlerta(alerta, 'La hora de fin debe ser posterior a la de inicio.'); return; }
+    try {
+      await adminApi.actualizarFranja(f.id, { fecha: d.fecha, hora_inicio: d.inicio, hora_fin: d.fin });
+      dlg.close();
+      mostrarAviso('Franja actualizada.', 'exito');
+      cargarFranjas();
+    } catch (e) { mostrarAlerta(alerta, e.message); }
+  }));
 }
 
 async function alternarFranja(f) {
@@ -328,6 +358,92 @@ formProf.addEventListener('submit', (e) => {
 });
 
 /* ===================================================================
+   PACIENTES
+   =================================================================== */
+const formPac = $('#filtro-pacientes');
+
+async function cargarPacientes() {
+  const zona = $('#tabla-pacientes');
+  const { buscar, estado } = datosFormulario(formPac);
+  mostrarEstado(zona, 'cargando');
+  try {
+    const lista = await adminApi.listarPacientes({ texto: buscar, estado });
+    if (!lista.length) { mostrarEstado(zona, 'vacio', 'No hay pacientes con esos filtros.'); return; }
+    vaciar(zona, el('p', { class: 'subtitulo', text: `${lista.length} paciente(s)${lista.length === 50 ? ' · se muestran los primeros 50, afine la búsqueda' : ''}` }), tabla([
+      { titulo: 'Nombre', celda: (p) => p.nombres },
+      { titulo: 'Documento', celda: (p) => p.documento ?? '—' },
+      { titulo: 'Teléfono', celda: (p) => p.telefono ?? '—' },
+      { titulo: 'Nacimiento', celda: (p) => (p.fecha_nacimiento ? formatearFecha(p.fecha_nacimiento, { day: 'numeric', month: 'short', year: 'numeric' }) : '—') },
+      { titulo: 'Estado', celda: (p) => insigniaActivo(p.activo) },
+      {
+        titulo: 'Acciones',
+        celda: (p) => el('div', { class: 'acciones' },
+          boton('Editar', () => editarPaciente(p), 'boton--secundario', `Editar a ${p.nombres}`),
+          boton(p.activo ? 'Desactivar' : 'Activar', () => alternarPaciente(p), p.activo ? 'boton--peligro' : 'boton--secundario'),
+          p.activo ? boton('Anonimizar', () => anonimizar(p), 'boton--texto', `Anonimizar a ${p.nombres}`) : null),
+      },
+    ], lista, 'Pacientes'));
+  } catch (e) {
+    mostrarEstado(zona, 'error', e.message);
+  }
+}
+
+function editarPaciente(p) {
+  const alerta = el('div', { hidden: true });
+  const campo = (id, etiqueta, props) => el('div', { class: 'campo' }, el('label', { for: id, text: etiqueta }), el('input', { id, ...props }));
+  const form = el('form', { class: 'formulario', attrs: { novalidate: true } },
+    campo('ep-nombres', 'Nombres y apellidos', { name: 'nombres', value: p.nombres ?? '', maxLength: 120, required: true }),
+    campo('ep-documento', 'Número de documento', { name: 'documento', value: p.documento ?? '', inputMode: 'numeric', maxLength: 15, required: true }),
+    campo('ep-telefono', 'Teléfono', { name: 'telefono', type: 'tel', value: p.telefono ?? '', maxLength: 16, required: true }),
+    campo('ep-nacimiento', 'Fecha de nacimiento (opcional)', { name: 'fecha_nacimiento', type: 'date', min: '1900-01-01', max: hoy, value: p.fecha_nacimiento ?? '' }));
+  const btnCancelar = el('button', { type: 'button', class: 'boton boton--secundario', text: 'Cancelar' });
+  const btnGuardar = el('button', { type: 'button', class: 'boton', text: 'Guardar cambios' });
+  const dlg = abrirDialogo({ titulo: `Editar paciente`, contenido: [alerta, form], acciones: [btnCancelar, btnGuardar] });
+  btnCancelar.addEventListener('click', () => dlg.close());
+  btnGuardar.addEventListener('click', () => conCarga(btnGuardar, async () => {
+    if (!validarFormulario(form, {
+      nombres: [reglas.requerido, reglas.nombres], documento: [reglas.requerido, reglas.documento],
+      telefono: [reglas.requerido, reglas.telefono], fecha_nacimiento: [reglas.fechaNacimiento],
+    })) return;
+    try {
+      await perfilApi.actualizar(p.id, datosFormulario(form));
+      dlg.close();
+      mostrarAviso('Datos del paciente actualizados.', 'exito');
+      cargarPacientes();
+    } catch (e) { mostrarAlerta(alerta, e.message); }
+  }));
+}
+
+async function alternarPaciente(p) {
+  if (p.activo && !(await confirmar({
+    titulo: 'Desactivar paciente',
+    mensaje: `${p.nombres} no podrá iniciar sesión ni reservar. Sus citas se conservan. Puede reactivarlo después.`,
+    textoAceptar: 'Desactivar', peligro: true,
+  }))) return;
+  try {
+    await adminApi.cambiarEstadoPerfil(p.id, !p.activo);
+    mostrarAviso(`Paciente ${p.activo ? 'desactivado' : 'activado'}.`, 'exito');
+    cargarPacientes();
+  } catch (e) { mostrarAviso(e.message, 'error'); }
+}
+
+async function anonimizar(p) {
+  const ok = await confirmar({
+    titulo: 'Anonimizar paciente',
+    mensaje: `Se reemplazará el nombre de ${p.nombres} y se borrarán documento, teléfono y fecha de nacimiento. Las citas pasadas se conservan para estadísticas. Esta acción no se puede deshacer.`,
+    textoAceptar: 'Anonimizar', peligro: true,
+  });
+  if (!ok) return;
+  try {
+    await adminApi.anonimizarPaciente(p.id);
+    mostrarAviso('Paciente anonimizado.', 'exito');
+    cargarPacientes();
+  } catch (e) { mostrarAviso(e.message, 'error'); }
+}
+
+formPac.addEventListener('submit', (e) => { e.preventDefault(); cargarPacientes(); });
+
+/* ===================================================================
    ESPECIALIDADES
    =================================================================== */
 const formEsp = $('#form-especialidad');
@@ -408,4 +524,5 @@ configurarPestanas($('[role="tablist"]'), async (nombre) => {
     llenarSelectEspecialidades(formProf.elements.especialidad).catch((e) => mostrarAviso(e.message, 'error'));
   }
   if (nombre === 'especialidades') cargarEspecialidades();
+  if (nombre === 'pacientes') cargarPacientes();
 });
