@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Reserva de citas médicas en línea de la IPS Ambulatoria Bienestar (institución ficticia, proyecto académico).">
+  <meta name="theme-color" content="#0b5cab">
+  <title>Mi espacio · CitaSalud</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'%3E%3Ccircle cx='22' cy='22' r='22' fill='%230b5cab'/%3E%3Crect x='12' y='14' width='20' height='18' rx='3' fill='white'/%3E%3Cpath d='M17.5 25.5l3 3 6-6' stroke='%2312b5b0' stroke-width='2.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap">
+  <link rel="stylesheet" href="assets/css/estilos.css">
+  <script type="module" src="assets/js/accesibilidad.js"></script>
+  <script type="module" src="assets/js/pages/paciente.js"></script>
+</head>
+<body>
+  <a class="saltar-contenido" href="#principal">Saltar al contenido</a>
+  <header class="encabezado">
+    <div class="encabezado__superior">
+      <a class="marca" href="index.html" aria-label="CitaSalud, inicio"><svg class="marca__icono" viewBox="0 0 44 44" aria-hidden="true" focusable="false"><circle cx="22" cy="22" r="22" fill="#0b5cab"/><path d="M22 6a16 16 0 0 1 16 16h-6a10 10 0 0 0-10-10z" fill="#1c9ad6"/><rect x="12" y="14" width="20" height="18" rx="3" fill="#fff"/><rect x="12" y="14" width="20" height="5" rx="2" fill="#d6ebfa"/><path d="M17 11v5M27 11v5" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/><path d="M17.5 25.5l3 3 6-6" stroke="#12b5b0" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="marca__texto"><span class="marca__nombre">Cita<b>Salud</b></span><span class="marca__sub">IPS Ambulatoria Bienestar</span></span></a>
+      <div id="usuario" class="usuario" aria-live="polite"></div>
+    </div>
+    <nav class="menu" aria-label="Menú principal"><ul><li><a href="index.html">Inicio</a></li><li><a href="paciente.html" aria-current="page">Mi espacio</a></li><li><a href="index.html#especialidades">Especialidades</a></li><li><a href="index.html#como-reservar">Cómo reservar</a></li><li><a href="index.html#canales">Canales de atención</a></li></ul></nav>
+  </header>
+  <section class="cabecera-pagina">
+    <div class="cabecera-pagina__contenido">
+      <p class="antetitulo">Oficina Virtual · Paciente</p>
+      <h1 class="titulo-pagina"><span id="saludo">Hola</span></h1>
+      <p class="subtitulo">Reserve, consulte o cancele sus citas en un solo lugar.</p>
+    </div>
+  </section>
+  <main id="principal" class="contenedor">
+    <div class="pestanas" role="tablist" aria-label="Secciones del paciente">
+      <button role="tab" id="tab-inicio" aria-controls="panel-inicio" data-pestana="inicio">Inicio</button>
+      <button role="tab" id="tab-reservar" aria-controls="panel-reservar" data-pestana="reservar">Reservar cita</button>
+      <button role="tab" id="tab-citas" aria-controls="panel-citas" data-pestana="citas">Mis citas</button>
+      <button role="tab" id="tab-perfil" aria-controls="panel-perfil" data-pestana="perfil">Mi perfil</button>
+    </div>
+
+    <section id="panel-inicio" role="tabpanel" aria-labelledby="tab-inicio" hidden>
+      <div id="alerta-perfil-incompleto" hidden></div>
+      <div class="rejilla rejilla--2">
+        <article class="tarjeta">
+          <h2>Próximas citas</h2>
+          <div id="proximas-citas"></div>
+        </article>
+        <article class="tarjeta">
+          <h2>¿Qué desea hacer?</h2>
+          <div class="acciones">
+            <button type="button" class="boton" data-ir="reservar">Reservar una cita</button>
+            <button type="button" class="boton boton--secundario" data-ir="citas">Ver mis citas</button>
+            <button type="button" class="boton boton--secundario" data-ir="perfil">Actualizar mis datos</button>
+          </div>
+          <p class="ayuda" id="regla-cancelacion"></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="panel-reservar" role="tabpanel" aria-labelledby="tab-reservar" hidden>
+      <div class="tarjeta"><h2>Buscar disponibilidad</h2><div id="zona-reserva"></div></div>
+    </section>
+
+    <section id="panel-citas" role="tabpanel" aria-labelledby="tab-citas" hidden>
+      <div class="tarjeta">
+        <h2>Mis citas</h2>
+        <form id="filtro-citas" class="formulario formulario--fila" novalidate>
+          <div class="campo">
+            <label for="ver-citas">Mostrar</label>
+            <select id="ver-citas" name="ver">
+              <option value="proximas">Próximas</option>
+              <option value="historial">Historial (pasadas)</option>
+              <option value="todas">Todas</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div id="lista-citas"></div>
+    </section>
+
+    <section id="panel-perfil" role="tabpanel" aria-labelledby="tab-perfil" hidden>
+      <div class="tarjeta">
+        <h2>Mis datos</h2>
+        <div id="alerta-perfil" hidden></div>
+        <form id="form-perfil" class="formulario" novalidate>
+          <div class="campo"><label for="p-nombres">Nombres y apellidos</label><input id="p-nombres" name="nombres" maxlength="120" required></div>
+          <div class="campo"><label for="p-documento">Número de documento</label><input id="p-documento" name="documento" inputmode="numeric" maxlength="15" required></div>
+          <div class="campo"><label for="p-telefono">Teléfono</label><input id="p-telefono" name="telefono" type="tel" maxlength="16" required></div>
+          <div class="campo"><label for="p-nacimiento">Fecha de nacimiento (opcional)</label><input id="p-nacimiento" name="fecha_nacimiento" type="date" min="1900-01-01"></div>
+          <div class="acciones"><button type="submit" class="boton">Guardar cambios</button></div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="pie">
+    <div class="pie__contenido">
+      <div><strong>CitaSalud</strong>Agenda en línea de la IPS Ambulatoria Bienestar, institución ficticia creada para un proyecto académico.</div>
+      <div><strong>Pacientes</strong><a href="index.html#acceso">Oficina Virtual</a><a href="registro.html">Crear cuenta</a><a href="recuperar.html">Recuperar contraseña</a></div>
+      <div><strong>Información</strong><a href="index.html#especialidades">Especialidades</a><a href="index.html#como-reservar">Cómo reservar</a><a href="index.html#canales">Canales de atención</a></div>
+    </div>
+    <div class="pie__legal">Proyecto académico · Análisis y Diseño de Software · Todos los datos son de prueba y no corresponden a personas reales.</div>
+  </footer>
+</body>
+</html>
