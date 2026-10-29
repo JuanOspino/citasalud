@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" width="1000" height="800" font-family="Arial, Helvetica, sans-serif">
+<title>Wireframe 01 · Portada e inicio de sesión (computador)</title>
+<rect width="100%" height="100%" fill="#f8f9fa"/>
+<text x="12" y="26" font-size="15" font-weight="700" fill="#343a40">Wireframe 01 · Portada e inicio de sesión (computador)</text>
+<g transform="translate(0,40)">
+<rect width="1000" height="760" fill="#fff" stroke="#6c757d" stroke-width="2"/>
+<rect x="0" y="0" width="1000" height="56" rx="0" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<rect x="20" y="14" width="28" height="28" rx="14" fill="#e9ecef" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="56" y="34" font-size="16" font-weight="800" fill="#343a40" text-anchor="start">CitaSalud</text>
+<rect x="530" y="12" width="146" height="30" rx="6" fill="#495057" stroke="#495057" stroke-width="1.5"/>
+<text x="603.0" y="31.5" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">Oficina V. Pacientes</text>
+<rect x="682" y="12" width="146" height="30" rx="6" fill="#495057" stroke="#495057" stroke-width="1.5"/>
+<text x="755.0" y="31.5" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">Oficina V. Profesionales</text>
+<rect x="834" y="12" width="146" height="30" rx="6" fill="#495057" stroke="#495057" stroke-width="1.5"/>
+<text x="907.0" y="31.5" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">Crear cuenta</text>
+<rect x="0" y="56" width="1000" height="36" rx="0" fill="#ced4da" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="270.0" y="79" font-size="12" font-weight="700" fill="#343a40" text-anchor="start">Inicio</text>
+<text x="395.0" y="79" font-size="12" font-weight="700" fill="#343a40" text-anchor="start">Especialidades</text>
+<text x="520.0" y="79" font-size="12" font-weight="700" fill="#343a40" text-anchor="start">Cómo reservar</text>
+<text x="645.0" y="79" font-size="12" font-weight="700" fill="#343a40" text-anchor="start">Canales de atención</text>
+<rect x="0" y="92" width="1000" height="230" rx="0" fill="#dee2e6" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="80" y="160" font-size="26" font-weight="800" fill="#343a40" text-anchor="start">Agende su cita médica en línea</text>
+<rect x="80" y="180" width="380" height="7" rx="3" fill="#e9ecef"/>
+<rect x="80" y="194" width="228.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="80" y="220" width="130" height="30" rx="6" fill="#fff" stroke="#495057" stroke-width="1.5"/>
+<text x="145.0" y="239.5" font-size="12" font-weight="700" fill="#495057" text-anchor="middle">INGRESAR ↓</text>
+<rect x="620" y="120" width="260" height="170" rx="4" fill="#e9ecef" stroke="#9aa3ab" stroke-width="1.5"/>
+<path d="M620 120L880 290M880 120L620 290" stroke="#9aa3ab" stroke-width="1"/>
+<text x="750.0" y="209.0" font-size="11" font-weight="600" fill="#6c757d" text-anchor="middle">ilustración</text>
+<text x="20" y="210" font-size="22" font-weight="700" fill="#343a40" text-anchor="start">‹</text>
+<text x="970" y="210" font-size="22" font-weight="700" fill="#343a40" text-anchor="start">›</text>
+<text x="500" y="312" font-size="11" font-weight="600" fill="#6c757d" text-anchor="middle">● ○ ○  Pausar</text>
+<rect x="0" y="322" width="1000" height="70" rx="0" fill="#adb5bd" stroke="#9aa3ab" stroke-width="1.5"/>
+<circle cx="60" cy="357" r="20" fill="#fff"/>
+<text x="88" y="362" font-size="12" font-weight="700" fill="#343a40" text-anchor="start">Reservar cita</text>
+<circle cx="250" cy="357" r="20" fill="#fff"/>
+<text x="278" y="362" font-size="12" font-weight="700" fill="#343a40" text-anchor="start">Mis citas</text>
+<circle cx="440" cy="357" r="20" fill="#fff"/>
+<text x="468" y="362" font-size="12" font-weight="700" fill="#343a40" text-anchor="start">Especialidades</text>
+<circle cx="630" cy="357" r="20" fill="#fff"/>
+<text x="658" y="362" font-size="12" font-weight="700" fill="#343a40" text-anchor="start">Cancelar cita</text>
+<circle cx="820" cy="357" r="20" fill="#fff"/>
+<text x="848" y="362" font-size="12" font-weight="700" fill="#343a40" text-anchor="start">Canales</text>
+<rect x="0" y="120" width="36" height="160" rx="0" fill="#495057" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="18" y="150" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">◐</text>
+<text x="18" y="190" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">A−</text>
+<text x="18" y="230" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">A+</text>
+<text x="40" y="430" font-size="20" font-weight="800" fill="#343a40" text-anchor="start">Oficina Virtual</text>
+<rect x="40" y="450" width="420" height="280" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<rect x="40" y="450" width="420" height="46" rx="4" fill="#495057" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="56" y="479" font-size="15" font-weight="800" fill="#fff" text-anchor="start">Iniciar sesión</text>
+<text x="60" y="520" font-size="11" font-weight="700" fill="#343a40" text-anchor="start">Correo electrónico</text>
+<rect x="60" y="526" width="380" height="28" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="68" y="544" font-size="11" font-weight="400" fill="#6c757d" text-anchor="start">nombre@correo.com</text>
+<text x="60" y="576" font-size="11" font-weight="700" fill="#343a40" text-anchor="start">Contraseña</text>
+<rect x="60" y="582" width="380" height="28" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<rect x="60" y="630" width="380" height="34" rx="6" fill="#495057" stroke="#495057" stroke-width="1.5"/>
+<text x="250.0" y="651.5" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">Ingresar</text>
+<text x="60" y="690" font-size="11" font-weight="600" fill="#6c757d" text-anchor="start">¿Olvidó su contraseña?   ·   Cree su cuenta de paciente</text>
+<text x="500" y="470" font-size="13" font-weight="800" fill="#343a40" text-anchor="start">Especialidades disponibles</text>
+<rect x="500" y="482" width="140" height="36" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<rect x="512" y="496" width="54.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="650" y="482" width="140" height="36" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<rect x="662" y="496" width="54.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="800" y="482" width="140" height="36" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<rect x="812" y="496" width="54.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="500" y="528" width="140" height="36" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<rect x="512" y="542" width="54.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="650" y="528" width="140" height="36" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<rect x="662" y="542" width="54.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="500" y="590" width="450" height="100" rx="4" fill="#dee2e6" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="520" y="625" font-size="16" font-weight="800" fill="#343a40" text-anchor="start">Reserve en 5 pasos o menos</text>
+<rect x="520" y="640" width="260" height="7" rx="3" fill="#e9ecef"/>
+<rect x="520" y="654" width="156.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="810" y="625" width="120" height="30" rx="6" fill="#495057" stroke="#495057" stroke-width="1.5"/>
+<text x="870.0" y="644.5" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">Crear mi cuenta</text>
+<circle cx="470" cy="741" r="9" fill="#ffd43b" stroke="#c79100"/>
+<text x="486" y="745" font-size="11" font-weight="600" fill="#7a5b00" text-anchor="start">Carrusel con pausa y teclado (WCAG 2.2.2); el login es el mismo para los 3 roles</text>
+</g>
+</svg>

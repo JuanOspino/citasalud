@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 680" width="1000" height="680" font-family="Arial, Helvetica, sans-serif">
+<title>Wireframe 02 · Paciente: buscar disponibilidad y confirmar reserva</title>
+<rect width="100%" height="100%" fill="#f8f9fa"/>
+<text x="12" y="26" font-size="15" font-weight="700" fill="#343a40">Wireframe 02 · Paciente: buscar disponibilidad y confirmar reserva</text>
+<g transform="translate(0,40)">
+<rect width="1000" height="640" fill="#fff" stroke="#6c757d" stroke-width="2"/>
+<rect x="0" y="0" width="1000" height="56" rx="0" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<rect x="20" y="14" width="28" height="28" rx="14" fill="#e9ecef" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="56" y="34" font-size="16" font-weight="800" fill="#343a40" text-anchor="start">CitaSalud</text>
+<text x="880" y="34" font-size="12" font-weight="600" fill="#6c757d" text-anchor="end">Carlos Pérez · PACIENTE</text>
+<rect x="890" y="13" width="92" height="30" rx="6" fill="#fff" stroke="#495057" stroke-width="1.5"/>
+<text x="936.0" y="32.5" font-size="12" font-weight="700" fill="#495057" text-anchor="middle">Cerrar sesión</text>
+<rect x="0" y="56" width="1000" height="36" rx="0" fill="#ced4da" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="270.0" y="79" font-size="12" font-weight="700" fill="#343a40" text-anchor="start">Inicio</text>
+<text x="395.0" y="79" font-size="12" font-weight="700" fill="#343a40" text-anchor="start">Especialidades</text>
+<text x="520.0" y="79" font-size="12" font-weight="700" fill="#343a40" text-anchor="start">Cómo reservar</text>
+<text x="645.0" y="79" font-size="12" font-weight="700" fill="#343a40" text-anchor="start">Canales de atención</text>
+<rect x="0" y="92" width="1000" height="90" rx="0" fill="#dee2e6" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="30" y="140" font-size="24" font-weight="800" fill="#343a40" text-anchor="start">Hola, Carlos</text>
+<rect x="30" y="152" width="180.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="30" y="200" width="59.0" height="28" rx="14" fill="#fff" stroke="#495057" stroke-width="1.5"/>
+<text x="59.5" y="218" font-size="11.5" font-weight="700" fill="#495057" text-anchor="middle">Inicio</text>
+<rect x="97.0" y="200" width="111.5" height="28" rx="14" fill="#495057" stroke="#495057" stroke-width="1.5"/>
+<text x="152.75" y="218" font-size="11.5" font-weight="700" fill="#fff" text-anchor="middle">Reservar cita</text>
+<rect x="216.5" y="200" width="81.5" height="28" rx="14" fill="#fff" stroke="#495057" stroke-width="1.5"/>
+<text x="257.25" y="218" font-size="11.5" font-weight="700" fill="#495057" text-anchor="middle">Mis citas</text>
+<rect x="306.0" y="200" width="81.5" height="28" rx="14" fill="#fff" stroke="#495057" stroke-width="1.5"/>
+<text x="346.75" y="218" font-size="11.5" font-weight="700" fill="#495057" text-anchor="middle">Mi perfil</text>
+<rect x="30" y="245" width="940" height="90" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="50" y="270" font-size="11" font-weight="700" fill="#343a40" text-anchor="start">Especialidad</text>
+<rect x="50" y="276" width="200" height="28" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="58" y="294" font-size="11" font-weight="400" fill="#6c757d" text-anchor="start">Todas</text>
+<text x="270" y="270" font-size="11" font-weight="700" fill="#343a40" text-anchor="start">Profesional</text>
+<rect x="270" y="276" width="200" height="28" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="278" y="294" font-size="11" font-weight="400" fill="#6c757d" text-anchor="start">Cualquiera</text>
+<text x="490" y="270" font-size="11" font-weight="700" fill="#343a40" text-anchor="start">Fecha</text>
+<rect x="490" y="276" width="200" height="28" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="498" y="294" font-size="11" font-weight="400" fill="#6c757d" text-anchor="start">dd/mm/aaaa</text>
+<rect x="710" y="276" width="230" height="30" rx="6" fill="#495057" stroke="#495057" stroke-width="1.5"/>
+<text x="825.0" y="295.5" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">Buscar disponibilidad</text>
+<text x="30" y="360" font-size="12" font-weight="600" fill="#6c757d" text-anchor="start">24 horarios disponibles · martes 3 de noviembre</text>
+<rect x="30" y="372" width="940" height="96" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="46" y="394" font-size="13" font-weight="800" fill="#343a40" text-anchor="start">Profesional · Especialidad</text>
+<rect x="46" y="406" width="104" height="46" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="56" y="426" font-size="12" font-weight="800" fill="#343a40" text-anchor="start">8:00 a. m.</text>
+<rect x="56" y="434" width="42.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="160" y="406" width="104" height="46" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="170" y="426" font-size="12" font-weight="800" fill="#343a40" text-anchor="start">8:30 a. m.</text>
+<rect x="170" y="434" width="42.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="274" y="406" width="104" height="46" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="284" y="426" font-size="12" font-weight="800" fill="#343a40" text-anchor="start">9:00 a. m.</text>
+<rect x="284" y="434" width="42.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="388" y="406" width="104" height="46" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="398" y="426" font-size="12" font-weight="800" fill="#343a40" text-anchor="start">9:30 a. m.</text>
+<rect x="398" y="434" width="42.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="502" y="406" width="104" height="46" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="512" y="426" font-size="12" font-weight="800" fill="#343a40" text-anchor="start">10:00 a. m.</text>
+<rect x="512" y="434" width="42.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="616" y="406" width="104" height="46" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="626" y="426" font-size="12" font-weight="800" fill="#343a40" text-anchor="start">10:30 a. m.</text>
+<rect x="626" y="434" width="42.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="730" y="406" width="104" height="46" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="740" y="426" font-size="12" font-weight="800" fill="#343a40" text-anchor="start">11:00 a. m.</text>
+<rect x="740" y="434" width="42.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="844" y="406" width="104" height="46" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="854" y="426" font-size="12" font-weight="800" fill="#343a40" text-anchor="start">11:30 a. m.</text>
+<rect x="854" y="434" width="42.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="30" y="482" width="940" height="96" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="46" y="504" font-size="13" font-weight="800" fill="#343a40" text-anchor="start">Profesional · Especialidad</text>
+<rect x="46" y="516" width="104" height="46" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="56" y="536" font-size="12" font-weight="800" fill="#343a40" text-anchor="start">8:00 a. m.</text>
+<rect x="56" y="544" width="42.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="160" y="516" width="104" height="46" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="170" y="536" font-size="12" font-weight="800" fill="#343a40" text-anchor="start">8:30 a. m.</text>
+<rect x="170" y="544" width="42.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="274" y="516" width="104" height="46" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="284" y="536" font-size="12" font-weight="800" fill="#343a40" text-anchor="start">9:00 a. m.</text>
+<rect x="284" y="544" width="42.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="388" y="516" width="104" height="46" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="398" y="536" font-size="12" font-weight="800" fill="#343a40" text-anchor="start">9:30 a. m.</text>
+<rect x="398" y="544" width="42.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="502" y="516" width="104" height="46" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="512" y="536" font-size="12" font-weight="800" fill="#343a40" text-anchor="start">10:00 a. m.</text>
+<rect x="512" y="544" width="42.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="616" y="516" width="104" height="46" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="626" y="536" font-size="12" font-weight="800" fill="#343a40" text-anchor="start">10:30 a. m.</text>
+<rect x="626" y="544" width="42.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="730" y="516" width="104" height="46" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="740" y="536" font-size="12" font-weight="800" fill="#343a40" text-anchor="start">11:00 a. m.</text>
+<rect x="740" y="544" width="42.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="844" y="516" width="104" height="46" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="854" y="536" font-size="12" font-weight="800" fill="#343a40" text-anchor="start">11:30 a. m.</text>
+<rect x="854" y="544" width="42.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="560" y="400" width="400" height="230" rx="4" fill="#fff" stroke="#495057" stroke-width="1.5"/>
+<rect x="560" y="400" width="400" height="40" rx="4" fill="#495057" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="576" y="426" font-size="14" font-weight="800" fill="#fff" text-anchor="start">Confirmar reserva</text>
+<text x="576" y="462" font-size="11" font-weight="600" fill="#6c757d" text-anchor="start">Profesional</text>
+<rect x="680" y="455" width="108.0" height="7" rx="3" fill="#e9ecef"/>
+<text x="576" y="482" font-size="11" font-weight="600" fill="#6c757d" text-anchor="start">Especialidad</text>
+<rect x="680" y="475" width="108.0" height="7" rx="3" fill="#e9ecef"/>
+<text x="576" y="502" font-size="11" font-weight="600" fill="#6c757d" text-anchor="start">Fecha</text>
+<rect x="680" y="495" width="108.0" height="7" rx="3" fill="#e9ecef"/>
+<text x="576" y="522" font-size="11" font-weight="600" fill="#6c757d" text-anchor="start">Hora</text>
+<rect x="680" y="515" width="108.0" height="7" rx="3" fill="#e9ecef"/>
+<text x="576" y="552" font-size="11" font-weight="700" fill="#343a40" text-anchor="start">Motivo breve (opcional)</text>
+<rect x="576" y="558" width="368" height="28" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<rect x="760" y="596" width="80" height="30" rx="6" fill="#fff" stroke="#495057" stroke-width="1.5"/>
+<text x="800.0" y="615.5" font-size="12" font-weight="700" fill="#495057" text-anchor="middle">Volver</text>
+<rect x="850" y="596" width="100" height="30" rx="6" fill="#495057" stroke="#495057" stroke-width="1.5"/>
+<text x="900.0" y="615.5" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">Confirmar</text>
+<circle cx="40" cy="626" r="9" fill="#ffd43b" stroke="#c79100"/>
+<text x="56" y="630" font-size="11" font-weight="600" fill="#7a5b00" text-anchor="start">Solo se muestran franjas libres; si otra persona la toma primero se avisa y se recarga</text>
+</g>
+</svg>

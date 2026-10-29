@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 680" width="1000" height="680" font-family="Arial, Helvetica, sans-serif">
+<title>Wireframe 05 · Panel administrativo: resumen e indicadores</title>
+<rect width="100%" height="100%" fill="#f8f9fa"/>
+<text x="12" y="26" font-size="15" font-weight="700" fill="#343a40">Wireframe 05 · Panel administrativo: resumen e indicadores</text>
+<g transform="translate(0,40)">
+<rect width="1000" height="640" fill="#fff" stroke="#6c757d" stroke-width="2"/>
+<rect x="0" y="0" width="1000" height="56" rx="0" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<rect x="20" y="14" width="28" height="28" rx="14" fill="#e9ecef" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="56" y="34" font-size="16" font-weight="800" fill="#343a40" text-anchor="start">CitaSalud</text>
+<text x="880" y="34" font-size="12" font-weight="600" fill="#6c757d" text-anchor="end">Laura Recepción · ADMINISTRACIÓN</text>
+<rect x="890" y="13" width="92" height="30" rx="6" fill="#fff" stroke="#495057" stroke-width="1.5"/>
+<text x="936.0" y="32.5" font-size="12" font-weight="700" fill="#495057" text-anchor="middle">Cerrar sesión</text>
+<rect x="0" y="56" width="1000" height="36" rx="0" fill="#ced4da" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="270.0" y="79" font-size="12" font-weight="700" fill="#343a40" text-anchor="start">Inicio</text>
+<text x="395.0" y="79" font-size="12" font-weight="700" fill="#343a40" text-anchor="start">Especialidades</text>
+<text x="520.0" y="79" font-size="12" font-weight="700" fill="#343a40" text-anchor="start">Cómo reservar</text>
+<text x="645.0" y="79" font-size="12" font-weight="700" fill="#343a40" text-anchor="start">Canales de atención</text>
+<rect x="0" y="92" width="1000" height="80" rx="0" fill="#dee2e6" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="30" y="138" font-size="24" font-weight="800" fill="#343a40" text-anchor="start">Panel administrativo</text>
+<rect x="30" y="186" width="66.5" height="28" rx="14" fill="#495057" stroke="#495057" stroke-width="1.5"/>
+<text x="63.25" y="204" font-size="11.5" font-weight="700" fill="#fff" text-anchor="middle">Resumen</text>
+<rect x="104.5" y="186" width="51.5" height="28" rx="14" fill="#fff" stroke="#495057" stroke-width="1.5"/>
+<text x="130.25" y="204" font-size="11.5" font-weight="700" fill="#495057" text-anchor="middle">Citas</text>
+<rect x="164.0" y="186" width="74.0" height="28" rx="14" fill="#fff" stroke="#495057" stroke-width="1.5"/>
+<text x="201.0" y="204" font-size="11.5" font-weight="700" fill="#495057" text-anchor="middle">Horarios</text>
+<rect x="246.0" y="186" width="111.5" height="28" rx="14" fill="#fff" stroke="#495057" stroke-width="1.5"/>
+<text x="301.75" y="204" font-size="11.5" font-weight="700" fill="#495057" text-anchor="middle">Profesionales</text>
+<rect x="365.5" y="186" width="81.5" height="28" rx="14" fill="#fff" stroke="#495057" stroke-width="1.5"/>
+<text x="406.25" y="204" font-size="11.5" font-weight="700" fill="#495057" text-anchor="middle">Pacientes</text>
+<rect x="455.0" y="186" width="119.0" height="28" rx="14" fill="#fff" stroke="#495057" stroke-width="1.5"/>
+<text x="514.5" y="204" font-size="11.5" font-weight="700" fill="#495057" text-anchor="middle">Especialidades</text>
+<rect x="30" y="232" width="940" height="64" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="50" y="252" font-size="11" font-weight="700" fill="#343a40" text-anchor="start">Desde</text>
+<rect x="50" y="258" width="300" height="28" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="370" y="252" font-size="11" font-weight="700" fill="#343a40" text-anchor="start">Hasta</text>
+<rect x="370" y="258" width="300" height="28" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<rect x="690" y="258" width="260" height="30" rx="6" fill="#495057" stroke="#495057" stroke-width="1.5"/>
+<text x="820.0" y="277.5" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">Actualizar indicadores</text>
+<rect x="30" y="310" width="226" height="80" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="46" y="350" font-size="24" font-weight="800" fill="#343a40" text-anchor="start">200</text>
+<text x="46" y="374" font-size="11" font-weight="600" fill="#6c757d" text-anchor="start">Citas en el periodo</text>
+<rect x="268" y="310" width="226" height="80" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="284" y="350" font-size="24" font-weight="800" fill="#343a40" text-anchor="start">2</text>
+<text x="284" y="374" font-size="11" font-weight="600" fill="#6c757d" text-anchor="start">Pendientes</text>
+<rect x="506" y="310" width="226" height="80" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="522" y="350" font-size="24" font-weight="800" fill="#343a40" text-anchor="start">139</text>
+<text x="522" y="374" font-size="11" font-weight="600" fill="#6c757d" text-anchor="start">Atendidas</text>
+<rect x="744" y="310" width="226" height="80" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="760" y="350" font-size="24" font-weight="800" fill="#343a40" text-anchor="start">21.9 %</text>
+<text x="760" y="374" font-size="11" font-weight="600" fill="#6c757d" text-anchor="start">Tasa de inasistencia</text>
+<rect x="30" y="405" width="306" height="200" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="46" y="430" font-size="13" font-weight="800" fill="#343a40" text-anchor="start">Citas por estado</text>
+<rect x="46" y="450" width="42.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="130" y="446" width="160" height="12" rx="2" fill="#6c757d" stroke="#9aa3ab" stroke-width="1.5"/>
+<rect x="46" y="484" width="42.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="130" y="480" width="60" height="12" rx="2" fill="#6c757d" stroke="#9aa3ab" stroke-width="1.5"/>
+<rect x="46" y="518" width="42.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="130" y="514" width="40" height="12" rx="2" fill="#6c757d" stroke="#9aa3ab" stroke-width="1.5"/>
+<rect x="46" y="552" width="42.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="130" y="548" width="10" height="12" rx="2" fill="#6c757d" stroke="#9aa3ab" stroke-width="1.5"/>
+<rect x="348" y="405" width="306" height="200" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="364" y="430" font-size="13" font-weight="800" fill="#343a40" text-anchor="start">Citas por especialidad</text>
+<rect x="364" y="450" width="42.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="448" y="446" width="160" height="12" rx="2" fill="#6c757d" stroke="#9aa3ab" stroke-width="1.5"/>
+<rect x="364" y="484" width="42.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="448" y="480" width="60" height="12" rx="2" fill="#6c757d" stroke="#9aa3ab" stroke-width="1.5"/>
+<rect x="364" y="518" width="42.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="448" y="514" width="40" height="12" rx="2" fill="#6c757d" stroke="#9aa3ab" stroke-width="1.5"/>
+<rect x="364" y="552" width="42.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="448" y="548" width="10" height="12" rx="2" fill="#6c757d" stroke="#9aa3ab" stroke-width="1.5"/>
+<rect x="666" y="405" width="306" height="200" rx="4" fill="#fff" stroke="#9aa3ab" stroke-width="1.5"/>
+<text x="682" y="430" font-size="13" font-weight="800" fill="#343a40" text-anchor="start">Citas por mes</text>
+<rect x="682" y="450" width="42.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="766" y="446" width="160" height="12" rx="2" fill="#6c757d" stroke="#9aa3ab" stroke-width="1.5"/>
+<rect x="682" y="484" width="42.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="766" y="480" width="60" height="12" rx="2" fill="#6c757d" stroke="#9aa3ab" stroke-width="1.5"/>
+<rect x="682" y="518" width="42.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="766" y="514" width="40" height="12" rx="2" fill="#6c757d" stroke="#9aa3ab" stroke-width="1.5"/>
+<rect x="682" y="552" width="42.0" height="7" rx="3" fill="#e9ecef"/>
+<rect x="766" y="548" width="10" height="12" rx="2" fill="#6c757d" stroke="#9aa3ab" stroke-width="1.5"/>
+<circle cx="40" cy="626" r="9" fill="#ffd43b" stroke="#c79100"/>
+<text x="56" y="630" font-size="11" font-weight="600" fill="#7a5b00" text-anchor="start">Pestañas: Citas (incluye reservar por un paciente), Horarios, Profesionales, Pacientes, Especialidades</text>
+</g>
+</svg>
